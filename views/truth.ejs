@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<h1>Little Dark Tooth</h1>
+
+<div class="menu">
+  <a class="black-btn" href="/dentist">To the Dentist Office <i class="fa fa-building-o" aria-hidden="true"></i></a>
+  <a class="black-btn" href="/personalpage">Home page <i class="fa fa-home" aria-hidden="true"></i></a>
+  <a class="black-btn" href="/logout">Leave!</a>
+</div>
+<p class="alert"><%= alertTruthText %></p>
+<form class="the-gum" action="/pull" method="post">
+
+  <% for(i=0; i<foundPatients.length; i++){ %>
+    <div class="the-rotten-tooth" name="badTooth">
+      <p><%= foundPatients[i].badTooth %></p>
+      <button class="pull" type="submit" name="button" value="<%= foundPatients[i]._id %>"><img class="tooth-pic" src="pictures/tooth.jpeg" alt="tooth"></button>
+    </div>
+  <%}%>
+
+</form>
+
+
+<%- include('partials/footer') %>

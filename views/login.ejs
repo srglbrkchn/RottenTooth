@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<h1>Sign in <i class="fa fa-unlock-alt" aria-hidden="true"></i></h1>
+
+<div class="signup-content">
+<form class="signup-frm" action="/login" method="post">
+  <div class="signup-area">
+    <input class="signup-input username"  type="text" name="username" placeholder="Username">
+    <input class="signup-input password" type="password" name="password" placeholder="Password">
+      <button class="signup-btn" type="submit" name="signin-btn">Sign In</button>
+  </div>
+  <p class="alert"><%=alertLoginTxt%></p>
+</form>
+
+<img class="line" src="pictures/line.png" alt="line">
+
+<div class="social-media">
+  <a href="/auth/google" role="button">Sign in with google <i class="fa fa-google" aria-hidden="true"></i></a>
+  <a href="/auth/facebook" role="button">Sign in with facebook <i class="fa fa-facebook" aria-hidden="true"></i></a>
+</div>
+</div>
+
+
+<%- include('partials/footer') %>

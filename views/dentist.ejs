@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+
+<h1>Dentist Office</h1>
+
+<div class="p-page dentist-page">
+  <form class="dentist-form" action="/dentist" method="post">
+    <div class="txt">
+      <textarea class="form-input msg-input" name="givenTruth" rows="8" cols="80" placeholder="Point to your rotten tooth..."></textarea>
+      <p class="alert"> <%= alertText %> </p>
+    </div>
+    <div class="dentist-btns">
+      <button class="white-btn" type="submit" name="confession-btn">Point <i class="fa fa-hand-o-left" aria-hidden="true"></i></button>
+      <button class="white-btn" type="button" name="button"><a href="/truth">To rotten teeth page</a></button>
+      <button class="white-btn" type="button" name="button"><a href="/personalpage">Home page</a></button>
+      <button class="black-btn" type="button" name="button"><a class="black-btn" href="/logout">Leave!</a></button>
+    </div>
+  </form>
+
+</div>
+
+<%- include('partials/footer') %>

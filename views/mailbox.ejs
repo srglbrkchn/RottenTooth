@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+<form class="" action="/answer" method="post">
+  <div class="mailbox-page">
+
+    <div class="buttons">
+      <button type="button" class="black-btn mailbox-btn" name="button">You have <%=totalMsg%> new message(s)</button>
+      <div class="mailbox-content">
+        <button class="white-btn operator-mail-btn" type="submit" name="button" value="operator"><%=operatorMsg%> new message(s) from your operator </button>
+        <button class="white-btn patient-mail-btn" type="submit" name="button" value="patient"><%=patientMsg%> new message(s) from your patient</button>
+      </div>
+
+      <div class="general-btn">
+        <a class="white-btn" href="/personalpage">Home page</a>
+        <a class="white-btn" href="/dentist">To the Dentist Office</a>
+        <a class="white-btn" href="/truth">To rotten teeth page</a>
+        <a class="white-btn" href="/logout">Leave!</a>
+      </div>
+
+    </div>
+
+    <div class="message-area">
+      <p class="alert"><%=alertMailText%></p>
+      <textarea class="form-input msg-input" name="answertxt" rows="8" cols="80"><%=mailboxTxt%></textarea>
+      <button class=" white-btn clear-btn" type="submit" name="button" value="clear">clear the message</button>
+      <button class=" white-btn answer-btn" type="submit" name="button" value="answer">answer!</button>
+    </div>
+
+  </div>
+</form>
+
+
+
+<%- include('partials/footer') %>

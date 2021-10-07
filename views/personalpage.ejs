@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<div class="p-page">
+
+  <div class="buttons">
+    <p class="alert"><%=approvedmsg%></p>
+    <a class=" white-btn" href="/mailbox">You have <%=totalMsg%> new message(s)</a>
+    <a class=" white-btn" href="/dentist">To the Dentist Office</a>
+    <a class=" white-btn" href="/truth">To rotten teeth page</a>
+    <a class="signup-btn black-btn" href="/logout">Leave!</a>
+  </div>
+
+
+  <div class="quote-area">
+    <img class="quote-img" src="https://picsum.photos/600/400/?blur&grayscale" alt="random image">
+    <div class="quote"> <%=message%> </div>
+    <div class="writer"><%=writer%> </div>
+
+  </div>
+</div>
+
+</div>
+
+
+
+
+<%- include('partials/footer') %>

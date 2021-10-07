@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<form class="msg-form" action="/message" method="post">
+  <p class="alert"><%=alertMsgTxt%></p>
+  <input type="hidden" name="patientId" value=<%=patientId%>>
+  <input type="hidden" name="operatorId" value=<%=operatorId%>>
+  <textarea name="message" class="message" name="name" rows="8" cols="80" placeholder="You have one chance to message the person you just pulled their tooth out. They might answer you; They might not. Chose your words wisely."></textarea>
+  <button class="white-btn" type="submit" name="button">send! <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+
+</form>
+
+<%- include('partials/footer') %>

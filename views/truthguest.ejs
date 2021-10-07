@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<h1>Little Dark Tooth</h1>
+
+<div class="menu">
+  <a class="black-btn" href="/signup">Sign Up</a>
+  <a class="black-btn" href="/login">Login</a>
+</div>
+<p class="alert"><%= alertTruthText %></p>
+<form class="the-gum" action="/pull" method="post">
+
+  <% for(i=0; i<foundPatients.length; i++){ %>
+    <div class="the-rotten-tooth" name="badTooth">
+      <%= foundPatients[i].badTooth %>
+      <button class="pull" type="submit" name="button" value="<%= foundPatients[i]._id %>"><img class="tooth-pic" src="pictures/tooth.jpeg" alt="tooth"></button>
+    </div>
+  <%}%>
+
+</form>
+
+
+<%- include('partials/footer') %>
